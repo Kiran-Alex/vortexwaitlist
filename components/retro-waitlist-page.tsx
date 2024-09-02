@@ -14,7 +14,7 @@ export default function Component() {
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [subscriberCount, setSubscriberCount] = useState("...")
+  const [subscriberCount, setSubscriberCount] = useState(0)
   const [error, setError] = useState('')
 
   useEffect(() => {
@@ -119,7 +119,7 @@ export default function Component() {
         {error && <p className="text-red-600 mt-2">{error}</p>}
 
         <p className="text-[#800080] text-lg mt-4">
-          {subscriberCount} groovy developers have joined the waitlist!
+          {subscriberCount>0 ? subscriberCount : "..."} groovy developers have joined the waitlist!
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
