@@ -111,7 +111,7 @@ export default function Component() {
           <div className="bg-[#FFD700] rounded-lg p-6 text-[#800080] border-4 border-[#800080] shadow-[4px_4px_0_#800080]">
             <Package className="w-12 h-12 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Groovy Packager</h3>
-            <p>Bundle your components with our far-out packager. It's outta sight!</p>
+            <p>{"Bundle your components with our far-out packager. It's outta sight!"}</p>
           </div>
           <div className="bg-[#FFD700] rounded-lg p-6 text-[#800080] border-4 border-[#800080] shadow-[4px_4px_0_#800080]">
             <Zap className="w-12 h-12 mb-4" />
@@ -121,7 +121,7 @@ export default function Component() {
           <div className="bg-[#FFD700] rounded-lg p-6 text-[#800080] border-4 border-[#800080] shadow-[4px_4px_0_#800080]">
             <Palette className="w-12 h-12 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Customizable</h3>
-            <p>Easily adapt the look and feel to match your brand's unique style. It's like a mood ring for your UI!</p>
+            <p>{"Easily adapt the look and feel to match your brand's unique style. It's like a mood ring for your UI!"}</p>
           </div>
         </div>
       </div>
