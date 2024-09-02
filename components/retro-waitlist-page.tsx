@@ -14,7 +14,7 @@ export default function Component() {
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [subscriberCount, setSubscriberCount] = useState(0)
+  const [subscriberCount, setSubscriberCount] = useState("...")
   const [error, setError] = useState('')
 
   useEffect(() => {
