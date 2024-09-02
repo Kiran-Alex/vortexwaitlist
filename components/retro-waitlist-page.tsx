@@ -19,6 +19,21 @@ export default function Component() {
 
   useEffect(() => {
     fetchSubscriberCount()
+
+    const subscription = supabase
+      .channel('table-db-changes')
+      .on('postgres_changes', {
+        event: '*',
+        schema: 'public',
+        table: 'waitlist'
+      }, () => {
+        fetchSubscriberCount()
+      })
+      .subscribe()
+
+    return () => {
+      subscription.unsubscribe()
+    }
   }, [])
 
   const fetchSubscriberCount = async () => {
@@ -49,7 +64,7 @@ export default function Component() {
 
       setIsSubmitted(true)
       setEmail('')
-      fetchSubscriberCount() // Refresh the count
+      // We don't need to call fetchSubscriberCount() here anymore
     } catch (error: any) {
       if (error.code === '23505') { // Unique constraint violation
         setError('This email is already registered.')
